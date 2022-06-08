@@ -1,7 +1,6 @@
 import { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import {
-  Stats,
   ScrollControls,
   Scroll,
   useScroll,
@@ -92,7 +91,7 @@ function Background() {
 
   return (
     <mesh rotation={[0, -1.5, 0]} position={[3, 0, -3]}>
-      <planeGeometry args={[15, 15]} />
+      <planeGeometry args={[35, 35]} />
       <meshBasicMaterial ref={ref} color={'#fff'} />
     </mesh>
   );
@@ -132,7 +131,6 @@ export default function App() {
             <Content />
           </Scroll>
         </ScrollControls>
-        <Stats showPanel={0} className="stats" />
       </Suspense>
     </Canvas>
   );
