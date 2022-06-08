@@ -61,6 +61,7 @@ html,
 .button {
   display: block;
   box-sizing: border-box;
+  text-align: center;
   width: 100%;
   background: #fff;
   border: 1px solid #111;
@@ -120,6 +121,7 @@ html,
 
   .button {
     display: inline-block;
+    text-align: left;
     width: auto;
   }
 } ;
