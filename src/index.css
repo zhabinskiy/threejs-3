@@ -1,13 +1,103 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Titillium+Web:wght@400;900&display=swap');
+
+body,
+html,
+#root {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 100vw;
+  height: 100vh;
 }
+
+.wrapper {
+  position: relative;
+  max-width: 220px;
+  margin: 20vh auto 0;
+  padding: 48px 48px;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  z-index: -1;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 14px;
+  padding: 0;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  color: #111;
+  line-height: 0.8;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+.description {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  z-index: 10;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #111;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 18px 24px;
+  margin-top: 48px;
+  cursor: pointer;
+  transition: 0.2s;
+  z-index: 10;
+}
+
+.button:hover {
+  transform: scale(0.97);
+  background: #111;
+  color: #fff;
+}
+
+@media screen and (min-width: 480px) {
+  .wrapper {
+    max-width: 360px;
+    margin: 28vh auto 0;
+    padding: 64px 48px;
+  }
+
+  .title {
+    font-size: 90px;
+  }
+
+  .description {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .button {
+    display: inline-block;
+    width: auto;
+  }
+} ;
